@@ -29,4 +29,8 @@ public class PacientController {
         return service.findById(id);
     }
 
+    @PostMapping(produces = MediaType.APPLICATION_JSON_VALUE)
+    public Pacient createPacient(@RequestBody Pacient pacient) {
+        return service.save(pacient);
+    }
 }

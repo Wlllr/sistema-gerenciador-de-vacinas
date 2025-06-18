@@ -24,11 +24,11 @@ public class PacientService {
                 .orElseThrow(() -> new ResourceNotFoundException("No records found for this id"));
     }
 
-    public Pacient create(Pacient pacient) {
+    public Pacient save(Pacient pacient) {
         return repository.save(pacient);
     }
 
-    public Pacient update(Pacient pacient) {
+    /*public Pacient update(Pacient pacient) {
         Pacient entity = repository.findById(pacient.getId())
                 .orElseThrow(() -> new ResourceNotFoundException("No records found for this id"));
         entity.setName(pacient.getName());
@@ -44,5 +44,5 @@ public class PacientService {
                 .orElseThrow(() -> new ResourceNotFoundException("No records found for this id"));
 
         repository.delete(entity);
-    }
+    }*/
 }
